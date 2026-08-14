@@ -1,5 +1,5 @@
 import React from 'react';
-import { Youtube, Instagram, ExternalLink, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Youtube, Instagram, ExternalLink, ShieldCheck, ArrowRight , Facebook} from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
 interface YouTubeGalleryProps {
@@ -128,6 +128,61 @@ export const YouTubeGallery: React.FC<YouTubeGalleryProps> = ({ onOpenQueryModal
             </a>
           </div>
         </div>
+
+        {/* facebook card */}
+
+
+<div className="bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 text-white rounded-2xl p-6 border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+  <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+    <Facebook className="w-56 h-56 text-blue-500" />
+  </div>
+
+  <div className="space-y-4 z-10">
+    <div className="flex items-center justify-between">
+      <span className="bg-[#1877F2] text-white font-black text-[10px] px-2.5 py-1 rounded tracking-widest uppercase flex items-center gap-1.5">
+        <Facebook className="w-4 h-4" />
+        Facebook Profile
+      </span>
+
+      <span className="text-slate-400 font-mono text-xs font-semibold">
+        {COMPANY_INFO.facebookHandle}
+      </span>
+    </div>
+
+    <div className="space-y-2">
+      <h3 className="text-xl font-black uppercase tracking-tight text-white">
+        Follow us on Facebook for daily updates
+      </h3>
+
+      <p className="text-xs text-slate-300 leading-relaxed font-normal">
+        Stay updated with factory news, machine launches, product updates,
+        customer deliveries, and latest industrial machinery announcements.
+      </p>
+    </div>
+
+    <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 font-mono text-xs text-blue-400 break-all flex items-center justify-between gap-2">
+      <span className="truncate">
+        https://www.facebook.com/people/Yash-Sharma/pfbid0HwjAKwMxXEKEuzCjzr2FqKSqf4YwMVKsvRb4ahTBZprAmjLgAh38aGDRMyFnzUZNl/
+      </span>
+
+      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+    </div>
+  </div>
+
+  <div className="pt-6 z-10">
+    <a
+      href="https://www.facebook.com/people/Yash-Sharma/pfbid0HwjAKwMxXEKEuzCjzr2FqKSqf4YwMVKsvRb4ahTBZprAmjLgAh38aGDRMyFnzUZNl/?rdid=jJPlPpLRVfiBhTvK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19DWpooEKJ%2F"
+      target="_blank"
+      rel="noreferrer"
+      className="w-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-extrabold py-3.5 px-5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-blue-950 transition-all hover:scale-[1.01]"
+      id="facebook-profile-link-btn"
+    >
+      <Facebook className="w-4 h-4" />
+      <span>Visit Facebook Profile</span>
+      <ExternalLink className="w-4 h-4 text-blue-200" />
+    </a>
+  </div>
+</div>
 
       </div>
 

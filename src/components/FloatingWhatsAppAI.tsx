@@ -73,13 +73,13 @@ export const FloatingWhatsAppAI: React.FC<FloatingWhatsAppAIProps> = ({
       )}
 
       {/* Toggle Quick Pills Button */}
-      <button
+      {/* <button
         onClick={() => setPillsExpanded(!pillsExpanded)}
         className="bg-slate-900/90 text-slate-200 hover:text-white text-[11px] font-extrabold px-3 py-1 rounded-full border border-slate-700 shadow-lg flex items-center gap-1 hover:border-orange-500 transition-colors"
       >
         <span>⚡ Quick WhatsApp Options</span>
         {pillsExpanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronUp className="w-3.5 h-3.5 text-orange-400" />}
-      </button>
+      </button> */}
 
       {/* Quick AI Assistant Trigger Pill */}
       <button

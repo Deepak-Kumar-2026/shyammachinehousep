@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     mainImage: cnc350mmImg,
     images: [
       cnc350mmImg,
-      cncMultiSpindleImg
+      // cncMultiSpindleImg
     ],
     features: [
       'Advanced 2-Axis CNC motion control with high precision stepper/servo synchronization',
@@ -150,49 +150,91 @@ export const PRODUCTS: Product[] = [
     warranty: '1 Year Warranty + Onsite Installation',
     catalogPdfName: 'SMH_Micro_Wire_Coil_Winding_250mm.pdf'
   },
+  // {
+  //   id: '500mm-heavy-duty-automatic-transformer-cnc-coil-winding-machine',
+  //   name: 'Sleeve cutting machine',
+  //   category: 'Transformer Coil Winding Machine',
+  //   model: 'SMH-CNC-CW-500',
+  //   tagline: 'High Torque 2-Axis CNC Winding Machine for Heavy Power & Distribution Transformers',
+  //   description: 'Sleeve cutting machine delivers fast, precise, and consistent cutting of sleeves, ensuring smooth edges, accurate dimensions, reduced material waste, and efficient production for various industrial applications.',
+  //   mainImage: cncHeavyTransformerImg,
+  //   images: [
+  //     cncHeavyTransformerImg,
+  //     cnc350mmImg
+  //   ],
+  //   features: [
+  //     'Heavy torque geared spindle motor with vector frequency drive',
+  //     'Pneumatic tailstock with dynamic balance tail-pin center',
+  //     'Integrated insulation paper tape applicator',
+  //     '7-inch Color Touch Screen HMI with graphical coil pattern builder'
+  //   ],
+  //   applications: [
+  //     'Power Distribution Transformers (HV & LV Coils)',
+  //     'Heavy Duty Industrial Magnet Coils',
+  //     'Substation Inductors & Reactor Units'
+  //   ],
+  //   specifications: [
+  //     { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
+  //     { parameter: 'Axis Control', unit: 'Axis', value: '2 Axis Heavy Servo' },
+  //     { parameter: 'Max Wire Diameter', unit: 'mm', value: '0.5 - 3.0 mm (Heavy Wire / Strip)' },
+  //     { parameter: 'Max Coil Outer Diameter (OD)', unit: 'mm', value: '500 mm' },
+  //     { parameter: 'Machine Application', unit: 'Type', value: 'Power Transformer HV/LV Coils' },
+  //     { parameter: 'Program Storage Capacity', unit: 'Programs', value: '100 Memory Programs' },
+  //     { parameter: 'Display Type', unit: 'Interface', value: '7-Inch Color Touch Screen HMI' },
+  //     { parameter: 'Automation Grade', unit: 'Type', value: 'Fully Automatic' }
+  //   ],
+  //   highlights: [
+  //     { label: 'Torque', value: 'High Torque Servo Drive' },
+  //     { label: 'Max OD', value: '500 mm Power Coils' },
+  //     { label: 'Capacity', value: 'Up to 3.0 mm Thick Wire' }
+  //   ],
+  //   inStock: true,
+  //   isHotProduct: true,
+  //   warranty: '1 Year Warranty + Free Engineer Onsite Setup',
+  //   catalogPdfName: 'SMH_Heavy_Transformer_Winder_500mm.pdf'
+  // },
+
+
   {
-    id: '500mm-heavy-duty-automatic-transformer-cnc-coil-winding-machine',
-    name: 'Sleeve cutting machine',
-    category: 'Transformer Coil Winding Machine',
-    model: 'SMH-CNC-CW-500',
-    tagline: 'High Torque 2-Axis CNC Winding Machine for Heavy Power & Distribution Transformers',
-    description: 'Industrial heavy-duty 500 mm CNC coil winder designed for thick copper strip and copper wire winding on large distribution transformer cores. Features high-torque AC servo drives, automatic paper insulation feeding, and heavy-duty tailstock support.',
-    mainImage: cncHeavyTransformerImg,
-    images: [
-      cncHeavyTransformerImg,
-      cnc350mmImg
-    ],
-    features: [
-      'Heavy torque geared spindle motor with vector frequency drive',
-      'Pneumatic tailstock with dynamic balance tail-pin center',
-      'Integrated insulation paper tape applicator',
-      '7-inch Color Touch Screen HMI with graphical coil pattern builder'
-    ],
-    applications: [
-      'Power Distribution Transformers (HV & LV Coils)',
-      'Heavy Duty Industrial Magnet Coils',
-      'Substation Inductors & Reactor Units'
-    ],
-    specifications: [
-      { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
-      { parameter: 'Axis Control', unit: 'Axis', value: '2 Axis Heavy Servo' },
-      { parameter: 'Max Wire Diameter', unit: 'mm', value: '0.5 - 3.0 mm (Heavy Wire / Strip)' },
-      { parameter: 'Max Coil Outer Diameter (OD)', unit: 'mm', value: '500 mm' },
-      { parameter: 'Machine Application', unit: 'Type', value: 'Power Transformer HV/LV Coils' },
-      { parameter: 'Program Storage Capacity', unit: 'Programs', value: '100 Memory Programs' },
-      { parameter: 'Display Type', unit: 'Interface', value: '7-Inch Color Touch Screen HMI' },
-      { parameter: 'Automation Grade', unit: 'Type', value: 'Fully Automatic' }
-    ],
-    highlights: [
-      { label: 'Torque', value: 'High Torque Servo Drive' },
-      { label: 'Max OD', value: '500 mm Power Coils' },
-      { label: 'Capacity', value: 'Up to 3.0 mm Thick Wire' }
-    ],
-    inStock: true,
-    isHotProduct: true,
-    warranty: '1 Year Warranty + Free Engineer Onsite Setup',
-    catalogPdfName: 'SMH_Heavy_Transformer_Winder_500mm.pdf'
-  },
+  id: 'sleeve-cutting-machine-sm-sl100',
+  name: 'Sleeve Cutting Machine',
+  category: 'Sleeve Cutting Machine',
+  model: 'SM-SL100',
+  tagline: 'High-Precision Sleeve Cutting Machine with Adjustable Cutting Length and Width',
+  description: 'Sleeve Cutting Machine is designed for fast and precise cutting of sleeves with adjustable cutting length and width. It provides consistent cutting accuracy, reliable operation, and efficient performance for industrial sleeve processing applications.',
+  mainImage: cncHeavyTransformerImg,
+  images: [
+    cncHeavyTransformerImg
+  ],
+  features: [
+    'Adjustable cutting width from 1 to 100 mm',
+    'Adjustable cutting length from 0.1 to 999.99 mm',
+    'Adjustable cutting speed for flexible production',
+    'Precision cutting with 0.1 mm tolerance'
+  ],
+  applications: [
+    'Electrical insulation sleeve cutting',
+    'Transformer and coil manufacturing',
+    'Industrial sleeve and tubing processing'
+  ],
+  specifications: [
+    { parameter: 'Cutting Width', unit: 'mm', value: '1 - 100 mm' },
+    { parameter: 'Cutting Length', unit: 'mm', value: '0.1 - 999.99 mm' },
+    { parameter: 'Speed', unit: 'Type', value: 'Adjustable' },
+    { parameter: 'Power Supply', unit: 'Voltage', value: 'AC220V 50Hz / AC110V 60Hz' },
+    { parameter: 'Tolerance', unit: 'mm', value: '0.1 mm' },
+    { parameter: 'Machine Weight', unit: 'kg', value: '23 kg' }
+  ],
+  highlights: [
+    { label: 'Width', value: '1 - 100 mm' },
+    { label: 'Length', value: '0.1 - 999.99 mm' },
+    { label: 'Tolerance', value: '0.1 mm Precision' }
+  ],
+  inStock: true,
+  isHotProduct: true,
+  warranty: '1 Year Warranty + Technical Support',
+  catalogPdfName: 'SMH_Sleeve_Cutting_Machine_SM-SL100.pdf'
+},
   {
     id: '200mm-automatic-cnc-coil-winding-machine',
     name: '200 mm Automatic CNC Coil Winding Machine',
@@ -394,49 +436,98 @@ export const PRODUCTS: Product[] = [
     warranty: '1 Year Warranty',
     catalogPdfName: 'SMH_Double_Spindle_Coil_Winder.pdf'
   },
+  // {
+  //   id: 'automatic-toroidal-core-cnc-coil-winding-machine',
+  //   name: 'Soldering Machine',
+  //   category: 'CNC Coil Winding Machine',
+  //   model: 'SMH-CNC-TOR-150',
+  //   tagline: '360° Synchronized Shuttle Rotation Machine for Ring & Toroidal Transformer Coils',
+  //   description: 'Soldering machine provides fast, reliable, and precise soldering for electrical components, ensuring strong connections, consistent quality, reduced processing time, and efficient performance in industrial manufacturing applications.',
+  //   mainImage: cncToroidalImg,
+  //   images: [
+  //     cncToroidalImg,
+  //     cnc350mmImg
+  //   ],
+  //   features: [
+  //     'Precision ring shuttle drive with quick swap magazine size',
+  //     '360-degree digital indexing core rotation controller',
+  //     'Photoelectric sensor turn counter for 100% turn accuracy',
+  //     'Adjustable pitch angle control for uniform ring coverage'
+  //   ],
+  //   applications: [
+  //     'Toroidal Power Transformers',
+  //     'Current Transformers (CT Coils)',
+  //     'EMI Filter Ring Chokes'
+  //   ],
+  //   specifications: [
+  //     { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
+  //     { parameter: 'Axis Control', unit: 'Axis', value: '3 Axis Toroidal Indexing' },
+  //     { parameter: 'Max Wire Diameter', unit: 'mm', value: '0.15 - 1.2 mm' },
+  //     { parameter: 'Max Coil Outer Diameter (OD)', unit: 'mm', value: '150 mm Finished Toroid' },
+  //     { parameter: 'Machine Application', unit: 'Type', value: 'Toroidal Core & Ring Coils' },
+  //     { parameter: 'Program Storage Capacity', unit: 'Programs', value: '50 Memory Programs' },
+  //     { parameter: 'Display Type', unit: 'Interface', value: 'Digital Microcontroller' },
+  //     { parameter: 'Automation Grade', unit: 'Type', value: 'Automatic' }
+  //   ],
+  //   highlights: [
+  //     { label: 'Core Type', value: 'Toroidal & Ring Core Winding' },
+  //     { label: 'Turns Accuracy', value: '100% Photoelectric Sensor' },
+  //     { label: 'Rotation', value: '360° Precision Core Drive' }
+  //   ],
+  //   inStock: true,
+  //   isHotProduct: true,
+  //   warranty: '1 Year Warranty + Lifetime Support',
+  //   catalogPdfName: 'SMH_Toroidal_Coil_Winder_Catalog.pdf'
+  // },
+
+
   {
-    id: 'automatic-toroidal-core-cnc-coil-winding-machine',
-    name: 'Soldering Machine',
-    category: 'CNC Coil Winding Machine',
-    model: 'SMH-CNC-TOR-150',
-    tagline: '360° Synchronized Shuttle Rotation Machine for Ring & Toroidal Transformer Coils',
-    description: 'Specialized 3-axis CNC toroidal winding machine engineered for wrapping copper wire around closed ring-shaped cores. Features automatic slider shuttle loading, electronic turns counting, and variable pitch spacing control for toroidal transformers and choke coils.',
-    mainImage: cncToroidalImg,
-    images: [
-      cncToroidalImg,
-      cnc350mmImg
-    ],
-    features: [
-      'Precision ring shuttle drive with quick swap magazine size',
-      '360-degree digital indexing core rotation controller',
-      'Photoelectric sensor turn counter for 100% turn accuracy',
-      'Adjustable pitch angle control for uniform ring coverage'
-    ],
-    applications: [
-      'Toroidal Power Transformers',
-      'Current Transformers (CT Coils)',
-      'EMI Filter Ring Chokes'
-    ],
-    specifications: [
-      { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
-      { parameter: 'Axis Control', unit: 'Axis', value: '3 Axis Toroidal Indexing' },
-      { parameter: 'Max Wire Diameter', unit: 'mm', value: '0.15 - 1.2 mm' },
-      { parameter: 'Max Coil Outer Diameter (OD)', unit: 'mm', value: '150 mm Finished Toroid' },
-      { parameter: 'Machine Application', unit: 'Type', value: 'Toroidal Core & Ring Coils' },
-      { parameter: 'Program Storage Capacity', unit: 'Programs', value: '50 Memory Programs' },
-      { parameter: 'Display Type', unit: 'Interface', value: 'Digital Microcontroller' },
-      { parameter: 'Automation Grade', unit: 'Type', value: 'Automatic' }
-    ],
-    highlights: [
-      { label: 'Core Type', value: 'Toroidal & Ring Core Winding' },
-      { label: 'Turns Accuracy', value: '100% Photoelectric Sensor' },
-      { label: 'Rotation', value: '360° Precision Core Drive' }
-    ],
-    inStock: true,
-    isHotProduct: true,
-    warranty: '1 Year Warranty + Lifetime Support',
-    catalogPdfName: 'SMH_Toroidal_Coil_Winder_Catalog.pdf'
-  },
+  id: 'automatic-angular-soldering-machine-sm-02aas',
+  name: 'Soldering Machine',
+  category: 'Soldering Machine',
+  model: 'SM-02AAS',
+  tagline: 'Automatic Angular Soldering Machine for Precise Electrical Component Soldering',
+  description: 'Automatic Angular Soldering Machine is designed for efficient loading, rosin application, soldering, cooling, and unloading operations. It provides consistent soldering performance with controlled feeding, temperature, and soldering processes for electrical and transformer component manufacturing.',
+  mainImage: cncToroidalImg,
+  images: [
+    cncToroidalImg
+  ],
+  features: [
+    'Automatic loading, soldering, cooling, and unloading',
+    '360-degree adjustable soldering angle',
+    'Conveyor belt feeding system',
+    'Automatic flux circulation with storage tank and pump',
+    'Thermostat and solid-state relay temperature control'
+  ],
+  applications: [
+    'Transformer Component Soldering',
+    'Electrical Component Manufacturing',
+    'Coil and Winding Component Production'
+  ],
+  specifications: [
+    { parameter: 'Equipment Size', unit: 'mm', value: 'L 900 × W 1600 × H 1700 mm' },
+    { parameter: 'Motor Quantity', unit: 'Motors', value: '3 Sets / 2 Servo Motors + 1 Stepper Motor' },
+    { parameter: 'Solder Angle', unit: 'Degrees', value: '360°' },
+    { parameter: 'Feeding Method', unit: 'Type', value: 'Conveyor Belt / Hand-Held Swing / Optional' },
+    { parameter: 'Blanking Method', unit: 'Type', value: 'Conveyor Belt' },
+    { parameter: 'Flux Addition Method', unit: 'Type', value: 'Storage Tank + Pump + Automatic Circulation' },
+    { parameter: 'Temperature Control Method', unit: 'Type', value: 'Thermostat + Solid State Relay' },
+    { parameter: 'Tin Furnace Dimensions', unit: 'mm', value: 'L350 × W100 × H50 mm' },
+    { parameter: 'Power Supply', unit: 'Voltage', value: '220V / 50Hz' },
+    { parameter: 'Air Pressure', unit: 'MPa', value: '0.5 - 0.6 MPa' },
+    { parameter: 'Total Power', unit: 'kW', value: '2.3 kW' },
+    { parameter: 'Equipment Weight', unit: 'kg', value: '200 kg' }
+  ],
+  highlights: [
+    { label: 'Solder Angle', value: '360° Adjustable' },
+    { label: 'Power', value: '2.3 kW' },
+    { label: 'Control', value: 'Thermostat + Solid State Relay' }
+  ],
+  inStock: true,
+  isHotProduct: true,
+  warranty: '1 Year Warranty + Technical Support',
+  catalogPdfName: 'SMH_Automatic_Angular_Soldering_Machine_SM-02AAS.pdf'
+},
   {
     id: 'voice-coil-speaker-cnc-coil-winding-machine',
     name: 'Voice Coil & Speaker CNC Coil Winding Machine',
@@ -556,96 +647,196 @@ export const PRODUCTS: Product[] = [
     warranty: '1 Year Warranty',
     catalogPdfName: 'SMH_Transformer_Winder_800mm.pdf'
   },
+//   {
+//     id: 'industrial-digital-soldering-pot',
+//     name: 'Coil and Code Tapping Machine',
+//     category: 'Soldering Pot',
+//     model: 'SMH-SP-100D',
+//     tagline: 'PID Temperature Controlled Titanium Alloy Soldering Bath for Wire Tinning',
+//     description: 'Coil and Core Tapping Machine ensures fast, precise, and consistent tapping operations, improving production efficiency, accuracy, connection quality, and reliability for transformer and electrical component manufacturing applications.',
+//     // mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+//     // images: [
+//     //   'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+//     //   'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
+//     // ],
+//    mainImage: smhSolderingPotImg,
+// images: [
+//   smhSolderingPotImg,
+//   cnc350mmImg
+// ],
+//     features: [
+//       'Microcomputer PID temperature control with dual LED display (Preset vs Actual)',
+//       'Titanium alloy solder crucible offering exceptional heat resistance and long life',
+//       'Rapid heating ceramic heating element array',
+//       'Energy saving thermal insulation casing'
+//     ],
+//     applications: [
+//       'Transformer Bobbin Wire Lead Tinning',
+//       'Enamel Copper Wire Dip Stripping & Soldering',
+//       'PCB Component Lead & Wire Harness Soldering'
+//     ],
+//     specifications: [
+//       { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
+//       { parameter: 'Temperature Range', unit: '°C', value: '100°C to 450°C (PID Controlled)' },
+//       { parameter: 'Pot Material', unit: 'Type', value: 'Titanium Alloy Crucible' },
+//       { parameter: 'Solder Capacity', unit: 'kg', value: '2.5 kg Lead-Free Solder' },
+//       { parameter: 'Power Consumption', unit: 'Watts', value: '600W / 220V AC' }
+//     ],
+//     highlights: [
+//       { label: 'Temp Range', value: '100°C - 450°C Digital PID' },
+//       { label: 'Material', value: 'Titanium Alloy Pot' },
+//       { label: 'Usage', value: 'Wire Lead Tinning & Dip Soldering' }
+//     ],
+//     inStock: true,
+//     isHotProduct: true,
+//     warranty: '1 Year Warranty',
+//     catalogPdfName: 'SMH_Soldering_Pot_Digital.pdf'
+//   },
+
+{
+  id: 'coil-and-core-tapping-machine-sm-6tm',
+  name: 'Coil and Core Tapping Machine',
+  category: 'Coil & Core Tapping Machine',
+  model: 'SM-6TM',
+  tagline: 'Automatic Coil and Core Tapping Machine for Fast and Precise Tapping Operations',
+  description: 'Coil and Core Tapping Machine is designed for efficient and consistent tapping operations with manual loading, automatic tapping, and automatic unloading. It provides adjustable tapping parameters and reliable performance for transformer and electrical component manufacturing.',
+  mainImage: smhSolderingPotImg,
+  images: [
+    smhSolderingPotImg
+  ],
+  features: [
+    'Manual loading system',
+    'Automatic tapping operation',
+    'Automatic unloading system',
+    'Adjustable number of turns from 1 to 9 turns',
+    'Adjustable diaphragm axis distance from 25 mm to 85 mm'
+  ],
+  applications: [
+    'Transformer Coil Tapping',
+    'Transformer Core Tapping',
+    'Electrical Component Manufacturing'
+  ],
+  specifications: [
+    { parameter: 'Power Source', unit: 'Voltage', value: 'AC 220V 50Hz' },
+    { parameter: 'Machine Weight', unit: 'kg', value: '45 kg' },
+    { parameter: 'Working Speed', unit: 'Time', value: '1.2 sec/pc' },
+    { parameter: 'Suitable Products', unit: 'Series', value: 'EEP-8 Series' },
+    { parameter: 'Option', unit: 'Motor', value: 'AC Motor' },
+    { parameter: 'Membrane Range', unit: 'mm', value: '34 mm - 77 mm Applicable' },
+    { parameter: 'Number of Turns', unit: 'Turns', value: '1 - 9 Turns, Arbitrarily Set' },
+    { parameter: 'Two-Axis Wheel Base', unit: 'mm', value: 'Diaphragm Axis Distance 25 - 85 mm Adjustable' }
+  ],
+  highlights: [
+    { label: 'Operation', value: 'Auto Tapping & Unloading' },
+    { label: 'Speed', value: '1.2 sec/pc' },
+    { label: 'Turns', value: '1 - 9 Adjustable Turns' }
+  ],
+  inStock: true,
+  isHotProduct: true,
+  warranty: '1 Year Warranty',
+  catalogPdfName: 'SMH_Coil_Core_Tapping_Machine_SM-6TM.pdf'
+},
+  // {
+  //   id: 'automatic-pvc-heat-shrink-sleeve-cutting-machine',
+  //   name: 'transformer coil winding machine',
+  //   category: 'Sleeve Cutting Machine',
+  //   model: 'SMH-SCM-100A',
+  //   tagline: 'High Speed Precision Microcomputer Automatic Pipe & Sleeve Cutting Machine',
+  //   description: 'Automatic PVC & Heat Shrink Sleeve Cutting Machine engineered for rapid, high-accuracy cutting of insulation sleeves, PVC tubing, heat shrink tubes, Teflon sleeves, and wire harnesses used in transformer winding, motor leads, and electrical bobbin assemblies. Features a digital microcomputer controller with stepper motor feeding, high-speed SKD-11 alloy cutting blade, and batch counter.',
+  //   mainImage: cncMultiSpindleImg,
+  //   images: [
+  //     cncMultiSpindleImg,
+  //     cnc350mmImg
+  //   ],
+  //   features: [
+  //     'Digital microcomputer LED control panel for easy cut length & quantity setup',
+  //     'High precision stepper motor feed mechanism ensuring ±0.1mm length accuracy',
+  //     'Heavy duty SKD-11 high speed steel cutter blade for crisp burr-free cuts',
+  //     'Automatic material shortage sensor and auto-stop alarm system',
+  //     'High speed cut rate up to 120 cuts per minute for high-volume harness production'
+  //   ],
+  //   applications: [
+  //     'Transformer Winding Wire Insulation Sleeve Cutting',
+  //     'Heat Shrink Tubing & PVC Cable Sleeve Preparation',
+  //     'Motor Lead Wire & Harness Assembly Lines',
+  //     'Electrical Bobbin Pin Insulation Tubing'
+  //   ],
+  //   specifications: [
+  //     { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
+  //     { parameter: 'Cutting Length Range', unit: 'mm', value: '0.1 mm to 99,999 mm' },
+  //     { parameter: 'Max Sleeve Outer Diameter', unit: 'mm', value: '1 mm to 25 mm' },
+  //     { parameter: 'Cutting Speed', unit: 'Cuts/Min', value: '100 - 120 Cuts per minute' },
+  //     { parameter: 'Cutting Accuracy', unit: 'mm', value: '± 0.1 mm Microcomputer Stepper' },
+  //     { parameter: 'Blade Material', unit: 'Grade', value: 'SKD-11 High Speed Steel' },
+  //     { parameter: 'Display Panel', unit: 'Type', value: 'Digital Microcomputer LED Panel' },
+  //     { parameter: 'Automation Grade', unit: 'Type', value: 'Fully Automatic' }
+  //   ],
+  //   highlights: [
+  //     { label: 'Cutting Speed', value: '120 Cuts / Min High Speed' },
+  //     { label: 'Accuracy', value: '± 0.1 mm Precision Stepper' },
+  //     { label: 'Blade', value: 'SKD-11 HSS Anti-Wear Blade' }
+  //   ],
+  //   inStock: true,
+  //   isHotProduct: true,
+  //   warranty: '1 Year Warranty + Free Spare Blade Set',
+  //   catalogPdfName: 'SMH_Sleeve_Cutting_Machine_Catalog.pdf'
+  // },
+
   {
-    id: 'industrial-digital-soldering-pot',
-    name: 'Coil and Code Tapping Machine',
-    category: 'Soldering Pot',
-    model: 'SMH-SP-100D',
-    tagline: 'PID Temperature Controlled Titanium Alloy Soldering Bath for Wire Tinning',
-    description: 'High performance industrial soldering pot built with a corrosion-resistant titanium alloy bath and PID digital microcomputer temperature control. Ideal for quick dip soldering, wire stripping, component lead tinning, and bobbin pin soldering.',
-    // mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
-    // images: [
-    //   'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
-    //   'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
-    // ],
-   mainImage: smhSolderingPotImg,
-images: [
-  smhSolderingPotImg,
-  cnc350mmImg
-],
-    features: [
-      'Microcomputer PID temperature control with dual LED display (Preset vs Actual)',
-      'Titanium alloy solder crucible offering exceptional heat resistance and long life',
-      'Rapid heating ceramic heating element array',
-      'Energy saving thermal insulation casing'
-    ],
-    applications: [
-      'Transformer Bobbin Wire Lead Tinning',
-      'Enamel Copper Wire Dip Stripping & Soldering',
-      'PCB Component Lead & Wire Harness Soldering'
-    ],
-    specifications: [
-      { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
-      { parameter: 'Temperature Range', unit: '°C', value: '100°C to 450°C (PID Controlled)' },
-      { parameter: 'Pot Material', unit: 'Type', value: 'Titanium Alloy Crucible' },
-      { parameter: 'Solder Capacity', unit: 'kg', value: '2.5 kg Lead-Free Solder' },
-      { parameter: 'Power Consumption', unit: 'Watts', value: '600W / 220V AC' }
-    ],
-    highlights: [
-      { label: 'Temp Range', value: '100°C - 450°C Digital PID' },
-      { label: 'Material', value: 'Titanium Alloy Pot' },
-      { label: 'Usage', value: 'Wire Lead Tinning & Dip Soldering' }
-    ],
-    inStock: true,
-    isHotProduct: true,
-    warranty: '1 Year Warranty',
-    catalogPdfName: 'SMH_Soldering_Pot_Digital.pdf'
-  },
-  {
-    id: 'automatic-pvc-heat-shrink-sleeve-cutting-machine',
-    name: 'transformer coil winding machine',
-    category: 'Sleeve Cutting Machine',
-    model: 'SMH-SCM-100A',
-    tagline: 'High Speed Precision Microcomputer Automatic Pipe & Sleeve Cutting Machine',
-    description: 'Automatic PVC & Heat Shrink Sleeve Cutting Machine engineered for rapid, high-accuracy cutting of insulation sleeves, PVC tubing, heat shrink tubes, Teflon sleeves, and wire harnesses used in transformer winding, motor leads, and electrical bobbin assemblies. Features a digital microcomputer controller with stepper motor feeding, high-speed SKD-11 alloy cutting blade, and batch counter.',
-    mainImage: cncMultiSpindleImg,
-    images: [
-      cncMultiSpindleImg,
-      cnc350mmImg
-    ],
-    features: [
-      'Digital microcomputer LED control panel for easy cut length & quantity setup',
-      'High precision stepper motor feed mechanism ensuring ±0.1mm length accuracy',
-      'Heavy duty SKD-11 high speed steel cutter blade for crisp burr-free cuts',
-      'Automatic material shortage sensor and auto-stop alarm system',
-      'High speed cut rate up to 120 cuts per minute for high-volume harness production'
-    ],
-    applications: [
-      'Transformer Winding Wire Insulation Sleeve Cutting',
-      'Heat Shrink Tubing & PVC Cable Sleeve Preparation',
-      'Motor Lead Wire & Harness Assembly Lines',
-      'Electrical Bobbin Pin Insulation Tubing'
-    ],
-    specifications: [
-      { parameter: 'Minimum Order Quantity', unit: 'Units', value: '1 Unit' },
-      { parameter: 'Cutting Length Range', unit: 'mm', value: '0.1 mm to 99,999 mm' },
-      { parameter: 'Max Sleeve Outer Diameter', unit: 'mm', value: '1 mm to 25 mm' },
-      { parameter: 'Cutting Speed', unit: 'Cuts/Min', value: '100 - 120 Cuts per minute' },
-      { parameter: 'Cutting Accuracy', unit: 'mm', value: '± 0.1 mm Microcomputer Stepper' },
-      { parameter: 'Blade Material', unit: 'Grade', value: 'SKD-11 High Speed Steel' },
-      { parameter: 'Display Panel', unit: 'Type', value: 'Digital Microcomputer LED Panel' },
-      { parameter: 'Automation Grade', unit: 'Type', value: 'Fully Automatic' }
-    ],
-    highlights: [
-      { label: 'Cutting Speed', value: '120 Cuts / Min High Speed' },
-      { label: 'Accuracy', value: '± 0.1 mm Precision Stepper' },
-      { label: 'Blade', value: 'SKD-11 HSS Anti-Wear Blade' }
-    ],
-    inStock: true,
-    isHotProduct: true,
-    warranty: '1 Year Warranty + Free Spare Blade Set',
-    catalogPdfName: 'SMH_Sleeve_Cutting_Machine_Catalog.pdf'
-  },
+  id: 'transformer-coil-winding-machine-with-tail-stock',
+  name: 'Transformer Coil Winding Machine',
+  category: 'Transformer Coil Winding Machine',
+  model: 'Winding Machine with Tail Stock',
+  tagline: 'Precision Servo Winding Machine with Tail Stock for Transformer and Electrical Coils',
+
+  description: 'Transformer Coil Winding Machine with Tail Stock is designed for precise and efficient winding of transformer and electrical coils. It features servo motor driven winding, adjustable winding width, high-speed operation, and memory storage for consistent and repeatable coil production.',
+
+  mainImage: cncMultiSpindleImg,
+
+  images: [
+    cncMultiSpindleImg
+  ],
+
+  features: [
+    'Single-axis winding spindle for precise coil winding',
+    'Servo motor driven spindle and wiring system',
+    'Adjustable winding width up to 300 mm',
+    'Maximum winding diameter up to 260 mm',
+    '1000 memory groups for storing winding programs',
+    'Tail stock support for stable and accurate winding'
+  ],
+
+  applications: [
+    'Transformer Coil Winding',
+    'Electrical Coil Manufacturing',
+    'Motor and Inductor Coil Winding',
+    'Industrial Wire and Bobbin Winding'
+  ],
+
+  specifications: [
+    { parameter: 'Wire Size', unit: 'mm', value: '0.03 - 1.5 mm' },
+    { parameter: 'Winding Width', unit: 'mm', value: '0 - 300 mm' },
+    { parameter: 'Maximum Winding Diameter', unit: 'mm', value: '260 mm' },
+    { parameter: 'Winding Spindle', unit: 'Type', value: 'Single Axis' },
+    { parameter: 'Spindle Motor', unit: 'Type', value: 'Servo Motor' },
+    { parameter: 'Wiring Motor', unit: 'Type', value: 'Servo Motor' },
+    { parameter: 'Machine Speed', unit: 'RPM', value: '0 - 2000 RPM' },
+    { parameter: 'Memory Groups', unit: 'Programs', value: '1000' },
+    { parameter: 'Power Supply', unit: 'Voltage', value: 'AC220V / 50Hz' },
+    { parameter: 'Machine Weight', unit: 'kg', value: '50 kg' }
+  ],
+
+  highlights: [
+    { label: 'Winding Width', value: '0 - 300 mm' },
+    { label: 'Max Diameter', value: '260 mm' },
+    { label: 'Speed', value: '0 - 2000 RPM' }
+  ],
+
+  inStock: true,
+  isHotProduct: true,
+  warranty: '1 Year Warranty',
+  catalogPdfName: 'SMH_Transformer_Coil_Winding_Machine_Catalog.pdf'
+},
   {
     id: 'heavy-duty-round-dip-soldering-pot',
     name: 'Heavy Duty Round Dip Soldering Pot',

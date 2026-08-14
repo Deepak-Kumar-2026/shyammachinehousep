@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Globe, ShieldCheck, MessageSquare, ArrowUpRight, Youtube, Instagram, BookOpen, Star, QrCode, Download } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, ShieldCheck, MessageSquare, ArrowUpRight, Youtube,Facebook, Instagram, BookOpen, Star, QrCode, Download } from 'lucide-react';
 import { COMPANY_INFO, TARGET_CITIES } from '../data/companyData';
 import { WebsiteQRWidget } from './WebsiteQRWidget';
 
@@ -49,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCity, onNavigate, onOpen
 
             <div className="flex flex-wrap gap-2 pt-1">
               <a
-                href="https://www.youtube.com/@shyammachinehouse5758"
+                href="https://youtube.com/@yashsharma-r3p?si=TGzZvdcwIHsa0XnU"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-3 py-2 rounded-lg transition-colors shadow-xs"
@@ -67,6 +67,17 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCity, onNavigate, onOpen
                 <Instagram className="w-4 h-4" />
                 <span>Instagram Profile</span>
               </a>
+
+
+              <a
+  href="https://www.facebook.com/people/Yash-Sharma/pfbid0HwjAKwMxXEKEuzCjzr2FqKSqf4YwMVKsvRb4ahTBZprAmjLgAh38aGDRMyFnzUZNl/?rdid=jJPlPpLRVfiBhTvK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19DWpooEKJ%2F"
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex items-center gap-1.5 bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs px-3 py-2 rounded-lg transition-colors shadow-xs"
+>
+  <Facebook className="w-4 h-4" />
+  <span>Facebook Profile</span>
+</a>
             </div>
           </div>
 

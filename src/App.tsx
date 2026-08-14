@@ -281,7 +281,7 @@ export default function App() {
                         </div>
 
                         <p className="text-xs text-slate-300 leading-relaxed font-normal">
-                          Our Gemini AI Assistant automatically answers buyer questions 24/7 regarding machine speeds, power ratings, prices, and shipping timelines to all 20 cities.
+                          AI Assistant automatically answers buyer questions 24/7 regarding machine speeds, power ratings, prices, and shipping timelines to all 20 cities.
                         </p>
 
                         <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2 text-xs">
@@ -418,9 +418,41 @@ export default function App() {
                       </h2>
                     </div>
 
-                    <p className="text-xs text-slate-700 leading-relaxed font-normal">
+                    {/* <p className="text-xs text-slate-700 leading-relaxed font-normal">
                       Established in 1998 in New Delhi under the leadership of Director <strong>{COMPANY_INFO.directorName}</strong>, SHYAM MACHINE HOUSE has earned a global reputation as India&apos;s leading manufacturer, stocking supplier, and exporter of high precision workshop machinery. Operating from Shahdara, New Delhi ({COMPANY_INFO.address.formatted}) with government registration (GSTIN: {COMPANY_INFO.gstin}), our company supplies Grade-1 All Geared Lathes, Heavy Radial Drills, Milling Machines, Power Presses, and Surface Grinders across pan-India and 25+ international countries.
-                    </p>
+                    </p> */}
+
+        <p className="text-xs text-slate-600 mt-2 max-w-3xl leading-relaxed font-medium">
+  Shyam Machine House is a manufacturer and importer of automation and
+  industrial machines based in Delhi, India, specializing in products
+  like coil winding machines, coil taping machines. The company, which
+  operates as a partnership, focuses on "quality first" and customer
+  satisfaction, and its product range also includes soldering pots,
+  sleeve cutting machines, and various controllers and fixtures.
+</p>
+
+{/* PRODUCTS */}
+<div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+  <h2 className="text-lg font-black text-slate-900">
+    Products:
+  </h2>
+
+  <p className="text-xs text-slate-600 mt-2 font-normal">
+    The company manufactures and importer a wide range of machines,
+    including:
+  </p>
+
+  <ul className="list-disc list-inside text-xs text-slate-600 mt-3 space-y-2 font-normal">
+    <li>Coil winding and taping machines</li>
+    <li>Toroidal machines</li>
+    <li>Sleeve cutting machines</li>
+    <li>Solder pots and soldering machines</li>
+    <li>Machine fixtures</li>
+    <li>
+      Machine controllers (including CNC winding and taping machine controllers)
+    </li>
+  </ul>
+</div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                       {COMPANY_INFO.stats.map((s, i) => (
@@ -594,10 +626,39 @@ export default function App() {
                   <h1 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mt-1">
                     About Shyam Machine House (Shyam Machine Tools)
                   </h1>
-                  <p className="text-xs text-slate-300 mt-2 max-w-3xl leading-relaxed">
-                    With over 25 years of engineering excellence, Shyam Machine House is recognized among India&apos;s top manufacturers and exporters of heavy workshop machinery.
-                  </p>
+                   <p className="text-xs text-slate-300 mt-2 max-w-3xl leading-relaxed">
+        Shyam Machine House is a manufacturer and importer of automation and
+        industrial machines based in Delhi, India, specializing in products
+        like coil winding machines, coil taping machines. The company, which
+        operates as a partnership, focuses on "quality first" and customer
+        satisfaction, and its product range also includes soldering pots,
+        sleeve cutting machines, and various controllers and fixtures.
+      </p>
                 </div>
+
+
+    {/* PRODUCTS */}
+    <div className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+      <h2 className="text-lg font-black text-slate-900">
+        Products:
+      </h2>
+
+      <p className="text-xs text-slate-600 mt-2">
+        The company manufactures and importer a wide range of machines,
+        including:
+      </p>
+
+      <ul className="list-disc list-inside text-xs text-slate-600 mt-3 space-y-2">
+        <li>Coil winding and taping machines</li>
+        <li>Toroidal machines</li>
+        <li>Sleeve cutting machines</li>
+        <li>Solder pots and soldering machines</li>
+        <li>Machine fixtures</li>
+        <li>
+          Machine controllers (including CNC winding and taping machine controllers)
+        </li>
+      </ul>
+    </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
