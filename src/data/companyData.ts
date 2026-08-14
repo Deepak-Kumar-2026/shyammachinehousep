@@ -7,6 +7,9 @@ const cncHeavyTransformerImg = '/src/assets/images/cnc_heavy_transformer_1786085
 const smhLogoImg = '/src/assets/images/smh_brand_logo_1785994135291.jpg';
 const udyamCertificatePdf = '/src/assets/certificates/udyam-certificate.pdf';
 const gstCertificatePdf = '/src/assets/certificates/gst-certificate.pdf';
+const smhSolderingPotImg = '/src/assets/images/smh_soldering_pot.jpg';
+const gstCertificateImg = '/src/assets/images/gstcertificate.png';
+const udyamCertificateImg = '/src/assets/images/udyamCertificate.png';
 
 export const COMPANY_INFO = {
   name: 'SHYAM MACHINE HOUSE',
@@ -139,7 +142,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '500mm-heavy-duty-automatic-transformer-cnc-coil-winding-machine',
-    name: '500 mm Heavy Duty Automatic Transformer CNC Coil Winding Machine',
+    name: 'Sleeve cutting machine',
     category: 'Transformer Coil Winding Machine',
     model: 'SMH-CNC-CW-500',
     tagline: 'High Torque 2-Axis CNC Winding Machine for Heavy Power & Distribution Transformers',
@@ -383,7 +386,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'automatic-toroidal-core-cnc-coil-winding-machine',
-    name: 'Automatic Toroidal Core CNC Coil Winding Machine',
+    name: 'Soldering Machine',
     category: 'CNC Coil Winding Machine',
     model: 'SMH-CNC-TOR-150',
     tagline: '360° Synchronized Shuttle Rotation Machine for Ring & Toroidal Transformer Coils',
@@ -545,16 +548,21 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'industrial-digital-soldering-pot',
-    name: 'Industrial Digital Temperature Controlled Soldering Pot',
+    name: 'Coil and Code Tapping Machine',
     category: 'Soldering Pot',
     model: 'SMH-SP-100D',
     tagline: 'PID Temperature Controlled Titanium Alloy Soldering Bath for Wire Tinning',
     description: 'High performance industrial soldering pot built with a corrosion-resistant titanium alloy bath and PID digital microcomputer temperature control. Ideal for quick dip soldering, wire stripping, component lead tinning, and bobbin pin soldering.',
-    mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
-    images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
-    ],
+    // mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    // images: [
+    //   'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    //   'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
+    // ],
+   mainImage: smhSolderingPotImg,
+images: [
+  smhSolderingPotImg,
+  cnc350mmImg
+],
     features: [
       'Microcomputer PID temperature control with dual LED display (Preset vs Actual)',
       'Titanium alloy solder crucible offering exceptional heat resistance and long life',
@@ -585,7 +593,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'automatic-pvc-heat-shrink-sleeve-cutting-machine',
-    name: 'Automatic PVC & Heat Shrink Sleeve Cutting Machine',
+    name: 'transformer coil winding machine',
     category: 'Sleeve Cutting Machine',
     model: 'SMH-SCM-100A',
     tagline: 'High Speed Precision Microcomputer Automatic Pipe & Sleeve Cutting Machine',
@@ -1075,7 +1083,7 @@ export const CERTIFICATES: Certificate[] = [
     issuedBy: 'Goods and Services Tax Department, Govt. of India',
     validUntil: 'Permanent Active Registration (Issued 24/06/2024)',
     description: 'Official GST Registration Certificate for SHYAM MACHINE HOUSE (Partnership: Srishty Jain & Yash Sharma). Principal Place of Business: First Floor, 1/4717, Gali No 4 & 5 Balbir Nagar Extn, Near Durga Puri Chowk, Shahdara, New Delhi - 110032.',
-    imageUrl: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+    imageUrl: gstCertificateImg,
     category: 'GOVT GST',
     pdfUrl: gstCertificatePdf
   },
@@ -1087,7 +1095,7 @@ export const CERTIFICATES: Certificate[] = [
     issuedBy: 'Ministry of Micro, Small & Medium Enterprises, Govt. of India',
     validUntil: 'Permanent Micro Enterprise Registration (Registered 21/02/2025)',
     description: 'Govt. of India MSME Certificate for SHYAM MACHINE HOUSE under NIC Codes 28170 (Manufacture of Office & Industrial Machinery) and 46593 (Wholesale of Electrical Machinery).',
-    imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+    imageUrl: udyamCertificateImg,
     category: 'GOVT MSME',
     pdfUrl: udyamCertificatePdf
   }
