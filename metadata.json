@@ -1,0 +1,6 @@
+{
+  "name": "SMH Industrial Machinery Portal",
+  "description": "Official portal for Shyam Machine House. Manufacturer & Supplier of Industrial Workshop Machinery, Lathes, Milling, Drills & Hydraulic Presses with AI WhatsApp Assistant, Catalog Downloads, and Real-Time Lead Tracking.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
