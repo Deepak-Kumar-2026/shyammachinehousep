@@ -1,15 +1,25 @@
 import { Product, Certificate, TargetCity, YouTubeVideo, BlogPost, CustomerReview } from '../types';
-const cncCoilWindingImg = '/src/assets/images/cnc_coil_winding_machine_1785992183980.jpg';
-const cnc350mmImg = '/src/assets/images/cnc_350mm_winder_1786085787974.jpg';
-const cncToroidalImg = '/src/assets/images/cnc_toroidal_winder_1786085804018.jpg';
-const cncMultiSpindleImg = '/src/assets/images/cnc_multi_spindle_1786085817162.jpg';
-const cncHeavyTransformerImg = '/src/assets/images/cnc_heavy_transformer_1786085830077.jpg';
-const smhLogoImg = '/src/assets/images/smh_brand_logo_1785994135291.jpg';
-const udyamCertificatePdf = '/src/assets/certificates/udyam-certificate.pdf';
-const gstCertificatePdf = '/src/assets/certificates/gst-certificate.pdf';
-const smhSolderingPotImg = '/src/assets/images/smh_soldering_pot.jpg';
-const gstCertificateImg = '/src/assets/images/gstcertificate.png';
-const udyamCertificateImg = '/src/assets/images/udyamCertificate.png';
+const cncCoilWindingImg = '/images/cnc_coil_winding_machine_1785992183980.jpg';
+
+const cnc350mmImg = '/images/cnc_350mm_winder_1786085787974.jpg';
+
+const cncToroidalImg = '/images/cnc_toroidal_winder_1786085804018.jpg';
+
+const cncMultiSpindleImg = '/images/cnc_multi_spindle_1786085817162.jpg';
+
+const cncHeavyTransformerImg = '/images/cnc_heavy_transformer_1786085830077.jpg';
+
+const smhLogoImg = '/images/smh_brand_logo_1785994135291.jpg';
+
+const smhSolderingPotImg = '/images/smh_soldering_pot.jpg';
+
+const gstCertificateImg = '/images/gstcertificate.png';
+
+const udyamCertificateImg = '/images/udyamCertificate.png';
+
+const udyamCertificatePdf = '/certificates/udyam-certificate.pdf';
+
+const gstCertificatePdf = '/certificates/gst-certificate.pdf';
 
 export const COMPANY_INFO = {
   name: 'SHYAM MACHINE HOUSE',
