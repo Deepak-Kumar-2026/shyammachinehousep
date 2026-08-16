@@ -33,8 +33,7 @@ export const YouTubeGallery: React.FC<YouTubeGalleryProps> = ({ onOpenQueryModal
       </div>
 
       {/* Social Media Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">        
         {/* YOUTUBE CARD */}
         <div className="bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">

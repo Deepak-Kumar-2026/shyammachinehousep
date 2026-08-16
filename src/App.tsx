@@ -132,7 +132,19 @@ export default function App() {
 
             {/* HOME VIEW */}
             {currentTab === 'home' && !selectedCityId && (
+
               <>
+
+
+{/* HOME PAGE FULL WIDTH BANNER */}
+{/* HOME PAGE BANNER */}
+<div className="w-full -mt-6 mb-5 flex justify-center">
+  <img
+    src="/images/home-banner.jpg"
+    alt="Shyam Machine House - Industrial Machinery"
+    className="w-full max-w-[1800px] h-auto block object-cover"
+  />
+</div>
                 {/* HIGH DENSITY HERO PRODUCT SHOWCASE WORKSPACE */}
                 <section className="space-y-4" id="high-density-workspace">
                   
