@@ -138,7 +138,7 @@ export default function App() {
 
 {/* HOME PAGE FULL WIDTH BANNER */}
 {/* HOME PAGE BANNER */}
-<div className="w-full -mt-6 mb-5 flex justify-center">
+<div className="w-full mt-0 mb-5 flex justify-center">
   <img
     src="/images/home-banner.jpg"
     alt="Shyam Machine House - Industrial Machinery"

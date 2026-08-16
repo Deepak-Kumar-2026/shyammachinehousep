@@ -152,13 +152,13 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
 
           {/* Logistics & Compliance Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-white/10 text-xs">
-            <div className="bg-black/30 backdrop-blur-md p-3 rounded-xl border border-white/10">
+            {/* <div className="bg-black/30 backdrop-blur-md p-3 rounded-xl border border-white/10">
               <div className="flex items-center gap-1.5 text-orange-300 font-black uppercase text-[10px]">
                 <Truck className="w-3.5 h-3.5" />
                 <span>Dispatch & Logistics</span>
               </div>
               <p className="font-bold text-white mt-0.5">{selectedCity.deliveryEstimate}</p>
-            </div>
+            </div> */}
 
             <div className="bg-black/30 backdrop-blur-md p-3 rounded-xl border border-white/10">
               <div className="flex items-center gap-1.5 text-orange-300 font-black uppercase text-[10px]">
@@ -227,7 +227,7 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
         </div>
 
         {/* Right: Targeted Meta Keywords Cloud */}
-        <div className="lg:col-span-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+        {/* <div className="lg:col-span-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-3">
           <div className="flex items-center justify-between border-b border-slate-100 pb-2">
             <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
               <Tag className="w-4 h-4 text-orange-600" />
@@ -245,7 +245,7 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
 
       </div>
 

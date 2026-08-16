@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Share2 } from 'lucide-react';
 import { 
   Phone, 
   Mail, 
@@ -265,8 +266,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
               id="nav-link-youtube"
             >
-              <Youtube className={`w-3.5 h-3.5 shrink-0 ${currentTab === 'youtube' && !selectedCityId ? 'text-white fill-white' : 'text-red-600 fill-red-600'}`} />
-              <span>YouTube</span>
+             <Share2
+  className={`w-3.5 h-3.5 shrink-0 ${
+    currentTab === 'youtube' && !selectedCityId
+      ? 'text-white'
+      : 'text-orange-600'
+  }`}
+/>
+<span>Social Links</span>
             </button>
 
             <button
