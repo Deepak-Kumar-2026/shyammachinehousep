@@ -34,32 +34,70 @@ export const QueryFormModal: React.FC<QueryFormModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.customerName || !formData.phone) return;
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!formData.customerName || !formData.phone) return;
 
-    setLoading(true);
-    try {
-      const res = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          source: 'QUERY_FORM'
-        })
-      });
+  //   setLoading(true);
+  //   try {
+  //     const res = await fetch('/api/lead', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({
+  //         ...formData,
+  //         source: 'QUERY_FORM'
+  //       })
+  //     });
 
-      if (res.ok) {
-        const data = await res.json();
-        setSubmitted(true);
-        setSupplierWaUrl(data.supplierWhatsappUrl || '');
-      }
-    } catch (err) {
-      console.error('Query form submit error:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     if (res.ok) {
+  //       const data = await res.json();
+  //       setSubmitted(true);
+  //       setSupplierWaUrl(data.supplierWhatsappUrl || '');
+  //     }
+  //   } catch (err) {
+  //     console.error('Query form submit error:', err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!formData.customerName || !formData.phone) return;
+
+  setLoading(true);
+
+  try {
+    // WhatsApp message
+    const message = `Hello Shyam Machine House,
+
+I would like to request a quotation.
+
+Name: ${formData.customerName}
+Phone / WhatsApp: ${formData.phone}
+Email: ${formData.email || 'Not provided'}
+City / Country: ${formData.city || 'Not provided'}
+Machine / Product: ${formData.product || 'Not specified'}
+
+Please share the price, availability and delivery details.`;
+
+    const whatsappUrl =
+      `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Remove / close form
+    onClose();
+
+  } catch (err) {
+    console.error('Query form submit error:', err);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4" id="query-modal-overlay">

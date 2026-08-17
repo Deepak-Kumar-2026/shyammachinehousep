@@ -74,7 +74,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ onOpenQueryModal
             Customer Reviews & Testimonials
           </h2>
           <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-            Read verified feedback from factory managers, workshop owners, and machinery exporters across India, Dubai, Australia, and 25+ global markets.
+            Read verified feedback from factory managers, workshop owners, and machinery exporters from top  cities of India like Delhi,  Karnataka , Maharashtra, Noida, Tamil  Nadu
           </p>
         </div>
 

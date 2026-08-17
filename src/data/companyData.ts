@@ -116,10 +116,11 @@ export const COMPANY_INFO = {
   stats: [
     { label: 'Years of Excellence', value: '25+' },
     { label: 'Machines Delivered', value: '12,500+' },
-    { label: 'Global Destinations', value: '25+ Countries' },
+    { label: 'Global Destinations', value: 'Cities in India' },
     { label: 'Customer Satisfaction', value: '99.4%' }
   ]
 };
+
 
 export const PRODUCTS: Product[] = [
   {
@@ -3350,8 +3351,8 @@ export const REVIEWS: CustomerReview[] = [
     id: 'rev-2',
     customerName: 'Tariq Al-Mansoor',
     company: 'Gulf Marine Repair & Fabrication LLC',
-    city: 'Dubai',
-    country: 'UAE',
+    city: 'Noida',
+    country: 'India',
     rating: 5,
     date: 'July 15, 2026',
     machineModel: 'Heavy Duty Radial Drilling Machine (SMH-RD-62)',
@@ -3396,10 +3397,10 @@ export const REVIEWS: CustomerReview[] = [
   },
   {
     id: 'rev-6',
-    customerName: 'David H. Thompson',
+    customerName: 'shiva',
     company: 'Southern Cross Metalworks',
-    city: 'Melbourne',
-    country: 'Australia',
+    city: 'Karnatka',
+    country: 'India',
     rating: 5,
     date: 'May 04, 2026',
     machineModel: 'Heavy Duty Shaping Machine (SMH-SH-24)',

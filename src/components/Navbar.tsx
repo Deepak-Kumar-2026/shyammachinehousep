@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white shadow-sm border-b border-slate-200 w-full overflow-hidden" id="main-header">
+    <header className="sticky top-0 z-40 bg-white shadow-sm border-b border-slate-200 w-full overflow-visible" id="main-header">
       {/* Top Utility Bar - Compact Single Line Flex */}
       <div className="bg-slate-900 text-white border-b border-slate-800" id="header-top-bar">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-1 flex items-center justify-between text-[10px] sm:text-[11px] font-medium gap-2 overflow-x-auto no-scrollbar whitespace-nowrap flex-nowrap">
@@ -225,10 +225,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Main Navigation Links Header Tabs Bar - Single Line Flex Layout for Mobile, Tablet & Desktop */}
       <div className="bg-slate-50 border-b border-slate-200 relative z-30" id="header-nav-bar">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-1 flex items-center justify-between gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" id="header-main-nav">
+        {/* <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-1 flex items-center justify-between gap-1 overflow-x-auto no-scrollbar whitespace-nowrap" id="header-main-nav"> */}
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 py-1 flex items-center justify-between gap-1 overflow-visible whitespace-nowrap" id="header-main-nav">
           
           {/* Horizontal Aligned Header Navigation Tabs - Single Line Flex */}
-          <nav className="flex items-center gap-1 text-xs font-bold text-slate-700 flex-nowrap shrink-0 overflow-x-auto no-scrollbar py-0.5" id="desktop-nav">
+          {/* <nav className="flex items-center gap-1 text-xs font-bold text-slate-700 flex-nowrap shrink-0 overflow-x-auto no-scrollbar py-0.5" id="desktop-nav"> */}
+          <nav className="flex items-center gap-1 text-xs font-bold text-slate-700 flex-nowrap shrink-0 overflow-visible py-0.5" id="desktop-nav">
             <button
               onClick={() => handleNavClick('home')}
               className={`py-1 px-2.5 rounded-md transition-all flex items-center gap-1 whitespace-nowrap shrink-0 text-[11px] sm:text-xs ${
@@ -313,6 +315,76 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Award className={`w-3.5 h-3.5 shrink-0 ${currentTab === 'certificates' && !selectedCityId ? 'text-white' : 'text-orange-600'}`} />
               <span>Certificates</span>
             </button>
+
+
+
+{/* YAHAN PASTE KARO */}
+
+{/* Cities Dropdown */}
+<div className="relative shrink-0" ref={dropdownRef}>
+  <button
+    type="button"
+    onClick={() => setCityDropdownOpen((prev) => !prev)}
+    className={`py-1 px-2.5 rounded-md transition-all flex items-center gap-1 whitespace-nowrap text-[11px] sm:text-xs ${
+      selectedCityId
+        ? 'bg-orange-600 text-white font-extrabold shadow-2xs'
+        : 'hover:text-slate-900 hover:bg-slate-200/60'
+    }`}
+    id="nav-link-cities"
+  >
+    <MapPin
+      className={`w-3.5 h-3.5 shrink-0 ${
+        selectedCityId ? 'text-white' : 'text-orange-600'
+      }`}
+    />
+
+    <span>Target Market</span>
+
+    <ChevronDown
+      className={`w-3.5 h-3.5 transition-transform ${
+        cityDropdownOpen ? 'rotate-180' : ''
+      }`}
+    />
+  </button>
+
+  {cityDropdownOpen && (
+    <div
+      className="absolute left-0 top-full mt-2 w-56 bg-white border border-slate-200 rounded-xl shadow-xl z-[9999] overflow-hidden"
+      id="cities-dropdown"
+    >
+      <div className="px-3 py-2 bg-slate-900 text-white">
+        <span className="text-[10px] font-black uppercase tracking-wider">
+          Target Cities
+        </span>
+      </div>
+
+      {TARGET_CITIES.map((city) => (
+        <button
+          key={city.id}
+          type="button"
+          onClick={() => handleCitySelect(city.id)}
+          className={`w-full px-4 py-3 text-left flex items-center justify-between transition-colors ${
+            selectedCityId === city.id
+              ? 'bg-orange-600 text-white'
+              : 'bg-white text-slate-800 hover:bg-orange-50 hover:text-orange-600'
+          }`}
+        >
+          <div>
+            <div className="text-xs font-black uppercase">
+              {city.name}
+            </div>
+
+            <div className="text-[9px] opacity-70 mt-0.5">
+              {city.region}
+            </div>
+          </div>
+
+          <MapPin className="w-3.5 h-3.5 shrink-0" />
+        </button>
+      ))}
+    </div>
+  )}
+</div>
 
            
           </nav>

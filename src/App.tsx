@@ -537,7 +537,7 @@ export default function App() {
                         Industrial Target Market Coverage
                       </span>
                       <h2 className="text-lg font-black uppercase text-slate-900 tracking-tight">
-                        Pan-India & International Export Destinations (20 Target Cities)
+                        Serving India’s Top 5 Industrial Cities
                       </h2>
                     </div>
                     <span className="text-xs text-slate-500 font-medium">Click any city to view local dispatch details</span>
@@ -683,10 +683,10 @@ export default function App() {
                     <h3 className="font-bold text-sm text-slate-900 uppercase">Government Tax Registered</h3>
                     <p className="text-xs text-slate-600 mt-1">GSTIN: {COMPANY_INFO.gstin}. Compliant for Pan-India industrial billing.</p>
                   </div>
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                  {/* <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
                     <h3 className="font-bold text-sm text-slate-900 uppercase">Global Export Network</h3>
                     <p className="text-xs text-slate-600 mt-1">Exporting heavy machinery to Dubai, South Africa, Nepal, Australia, UK, Saudi Arabia, and SAARC countries.</p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <GoogleMapSection />

@@ -197,25 +197,50 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCity, onNavigate, onOpen
         </div>
 
         {/* Bottom Bar */}
-        <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-slate-400">
-          <div>
-            © {new Date().getFullYear()} <strong className="text-white">SHYAM MACHINE HOUSE</strong>. All Rights Reserved. ISO 9001:2015 Certified Manufacturing Facility.
-          </div>
+        {/* Bottom Bar */}
+{/* <div className="mt-8 pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4"> */}
+<div className="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
 
-          <div className="flex items-center gap-4 text-[11px]">
-            <button onClick={() => onNavigate('privacy')} className="hover:text-orange-400 transition-colors">
-              Privacy Policy
-            </button>
-            <span>•</span>
-            <button onClick={() => onNavigate('terms')} className="hover:text-orange-400 transition-colors">
-              Terms & Conditions
-            </button>
-            <span>•</span>
-            <button onClick={onOpenQueryModal} className="text-orange-400 font-bold hover:underline">
-              Request Price Quotation
-            </button>
-          </div>
-        </div>
+  {/* LEFT SIDE - SAME */}
+  <div className="text-[10px] text-slate-500">
+    © 2026{" "}
+    <span className="font-bold text-slate-300">
+      SHYAM MACHINE HOUSE
+    </span>
+    . All Rights Reserved. ISO 9001:2015 Certified Manufacturing Facility.
+  </div>
+
+  {/* RIGHT SIDE */}
+  {/* RIGHT SIDE */}
+<div className="flex items-center gap-3">
+
+  <span className="text-[11px] font-semibold whitespace-nowrap">
+    <span className="text-orange-400">Design</span>{" "}
+    <span className="text-slate-300">and</span>{" "}
+    <span className="text-orange-400">Developed</span>{" "}
+    <span className="text-slate-300">by :</span>
+  </span>
+
+  {/* Divider */}
+  <div className="h-8 w-px bg-slate-700"></div>
+
+  {/* Zolexo Mart Logo */}
+  {/* <img
+  src="/images/foter.png"
+  alt="Zolexo Mart"
+  className="h-9 w-auto object-contain"
+/> */}
+
+<img
+  src="/images/foter.png"
+  alt="Zolexo Mart"
+  className="h-6 w-auto object-contain"
+/>
+</div>
+ 
+
+
+</div>
 
       </div>
     </footer>

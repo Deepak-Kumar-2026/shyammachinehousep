@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { X, Download, MessageSquare, CheckCircle, FileText } from 'lucide-react';
 import { COMPANY_INFO, PRODUCTS } from '../data/companyData';
-import { generateCatalogPDF } from '../utils/generateCatalogPDF';
+// import { generateCatalogPDF } from '../utils/generateCatalogPDF';
+
+
 
 interface CatalogModalProps {
   isOpen: boolean;
@@ -27,33 +29,77 @@ export const CatalogModal: React.FC<CatalogModalProps> = ({ isOpen, onClose }) =
     if (!formData.name || !formData.phone) return;
 
     setLoading(true);
+    // try {
+    //   // 1. Generate & download the catalogue PDF directly to user device
+    //   generateCatalogPDF(formData);
+
+    //   // 2. Submit lead details to backend & WhatsApp supplier notification
+    //   const res = await fetch('/api/catalog-download', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(formData)
+    //   });
+
+    //   if (res.ok) {
+    //     const data = await res.json();
+    //     setSubmitted(true);
+    //     setWhatsappUrl(data.supplierWhatsappUrl || '');
+    //   } else {
+    //     setSubmitted(true);
+    //   }
+    // } catch (err) {
+    //   console.error('Catalog download lead submit error:', err);
+    //   // Fallback pdf generation if network error
+    //   generateCatalogPDF(formData);
+    //   setSubmitted(true);
+    // } finally {
+    //   setLoading(false);
+    // }
+
+
     try {
-      // 1. Generate & download the catalogue PDF directly to user device
-      generateCatalogPDF(formData);
+  // PDF DOWNLOAD
+  const pdfUrl = '/catalog/Shyam-Machine-House-Catalog-2026.pdf';
 
-      // 2. Submit lead details to backend & WhatsApp supplier notification
-      const res = await fetch('/api/catalog-download', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = 'Shyam-Machine-House-Catalog-2026.pdf';
 
-      if (res.ok) {
-        const data = await res.json();
-        setSubmitted(true);
-        setWhatsappUrl(data.supplierWhatsappUrl || '');
-      } else {
-        setSubmitted(true);
-      }
-    } catch (err) {
-      console.error('Catalog download lead submit error:', err);
-      // Fallback pdf generation if network error
-      generateCatalogPDF(formData);
-      setSubmitted(true);
-    } finally {
-      setLoading(false);
-    }
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // WHATSAPP MESSAGE
+  const message = `Hello Shyam Machine House,
+
+I am interested in the 2026 Technical Catalog.
+
+Name: ${formData.name}
+Mobile / WhatsApp: ${formData.phone}
+City / Target Market: ${formData.city}
+Product Interest: ${formData.product}
+
+Please share the latest price and quotation.`;
+
+  const whatsappLink =
+    `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  setWhatsappUrl(whatsappLink);
+  setSubmitted(true);
+
+  // Open WhatsApp
+  window.open(whatsappLink, '_blank');
+
+} catch (err) {
+  console.error('Catalog download error:', err);
+} finally {
+  setLoading(false);
+}
   };
+
+
+
+  
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4" id="catalog-modal-overlay">
@@ -184,7 +230,7 @@ export const CatalogModal: React.FC<CatalogModalProps> = ({ isOpen, onClose }) =
                   </a>
                 )}
 
-                <button
+                {/* <button
                   type="button"
                   onClick={() => {
                     generateCatalogPDF(formData);
@@ -194,7 +240,28 @@ export const CatalogModal: React.FC<CatalogModalProps> = ({ isOpen, onClose }) =
                 >
                   <FileText className="w-4 h-4 text-orange-400" />
                   <span>Download PDF Document Directly</span>
-                </button>
+                </button> */}
+
+
+                <button 
+  type="button"
+  onClick={() => {
+    const link = document.createElement('a');
+
+    link.href = '/catalog/Shyam-Machine-House-Catalog-2026.pdf';
+    link.download = 'Shyam-Machine-House-Catalog-2026.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    onClose();
+  }}
+  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
+>
+  <FileText className="w-4 h-4 text-orange-400" />
+  <span>Download PDF Document Directly</span>
+</button>
               </div>
             </div>
           )}
