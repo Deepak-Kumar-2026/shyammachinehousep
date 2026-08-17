@@ -36,11 +36,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
 
   const handleProductClick = () => {
-  if (isHotProductCard) {
-    window.location.href = `/${product.id}`;
-  } else {
-    onViewDetails(product);
-  }
+  // if (isHotProductCard) {
+  //   window.location.href = `/${product.id}`;
+  // } else {
+  //   onViewDetails(product);
+  onViewDetails(product);
+  // }
 };
 
 
