@@ -58,6 +58,16 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
 
   const currentGradient = getCityGradient(selectedCity.id);
 
+  const handleMappedProductClick = (product: Product) => {
+  window.history.pushState(
+    {},
+    '',
+    `/${selectedCity.id}/${product.id}`
+  );
+
+  onViewProductDetails(product, selectedCity);
+};
+
   return (
     <div className="space-y-6" id="location-hub-view-container">
       
@@ -308,7 +318,8 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
                   {/* Image */}
                   <div 
                     className="relative aspect-4/3 bg-slate-100 overflow-hidden cursor-pointer group"
-                    onClick={() => onViewProductDetails(product, selectedCity)}
+                    // onClick={() => onViewProductDetails(product, selectedCity)}
+                    onClick={() => handleMappedProductClick(product)}
                   >
                     <img
                       src={product.mainImage}
@@ -324,7 +335,9 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
                   {/* Body */}
                   <div className="p-4 space-y-2">
                     <h3 
-                      onClick={() => onViewProductDetails(product, selectedCity)}
+                      // onClick={() => onViewProductDetails(product, selectedCity)}
+                        onClick={() => handleMappedProductClick(product)}
+
                       className="text-sm font-black text-slate-900 hover:text-orange-600 transition-colors uppercase tracking-tight cursor-pointer line-clamp-2"
                     >
                       {mappedTitle}
@@ -350,7 +363,8 @@ export const LocationHubView: React.FC<LocationHubViewProps> = ({
                 {/* Card Action Buttons */}
                 <div className="p-4 pt-0 grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => onViewProductDetails(product, selectedCity)}
+                    // onClick={() => onViewProductDetails(product, selectedCity)}
+                    onClick={() => handleMappedProductClick(product)}
                     className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2 rounded-lg text-xs transition-colors uppercase tracking-wider text-[11px] flex items-center justify-center gap-1"
                   >
                     <FileText className="w-3.5 h-3.5 text-slate-600" />

@@ -413,6 +413,8 @@ export default function App() {
                         product={product}
                         onViewDetails={(p) => setSelectedProductModal(p)}
                         onOpenQueryModal={handleOpenQuery}
+                          isHotProductCard={true}
+
                       />
                     ))}
                   </div>

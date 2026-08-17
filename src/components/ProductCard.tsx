@@ -3,17 +3,47 @@ import { MessageSquare, FileText, ChevronRight, Eye } from 'lucide-react';
 import { Product } from '../types';
 import { COMPANY_INFO } from '../data/companyData';
 
+// interface ProductCardProps {
+//   product: Product;
+//   onViewDetails: (product: Product) => void;
+//   onOpenQueryModal: (productName: string) => void;
+
+
+// }
+
+
+
 interface ProductCardProps {
   product: Product;
   onViewDetails: (product: Product) => void;
   onOpenQueryModal: (productName: string) => void;
+  isHotProductCard?: boolean;
+
 }
 
+
+
+// export const ProductCard: React.FC<ProductCardProps> = ({
+//   product,
+//   onViewDetails,
+//   onOpenQueryModal
+// }) => {
 export const ProductCard: React.FC<ProductCardProps> = ({
   product,
   onViewDetails,
-  onOpenQueryModal
+  onOpenQueryModal,
+  isHotProductCard = false
 }) => {
+
+  const handleProductClick = () => {
+  if (isHotProductCard) {
+    window.location.href = `/${product.id}`;
+  } else {
+    onViewDetails(product);
+  }
+};
+
+
   const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodeURIComponent(
     `Hello Shyam Machine Tools,\n\nI am interested in getting quotation for:\n*${product.name}* (${product.model})\n\nPlease share updated price list, video, and delivery terms.`
   )}`;
@@ -24,7 +54,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       id={`product-card-${product.id}`}
     >
       {/* Product Image Container */}
-      <div className="relative aspect-4/3 bg-slate-100 overflow-hidden cursor-pointer" onClick={() => onViewDetails(product)}>
+      <div className="relative aspect-4/3 bg-slate-100 overflow-hidden cursor-pointer"   onClick={handleProductClick}>
         <img
           src={product.mainImage}
           alt={product.name}
@@ -65,7 +95,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             MODEL: {product.model}
           </div>
           <h3 
-            onClick={() => onViewDetails(product)}
+            // onClick={() => onViewDetails(product)}
+            onClick={handleProductClick}
             className="text-base font-black text-slate-900 hover:text-orange-600 transition-colors line-clamp-1 cursor-pointer uppercase tracking-tight"
             id={`product-title-${product.id}`}
           >
@@ -88,15 +119,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Card Actions */}
         <div className="pt-1 grid grid-cols-2 gap-2">
-          <button
-            onClick={() => onViewDetails(product)}
+          {/* <button
+            // onClick={() => onViewDetails(product)}
+             onClick={handleProductClick}
             className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2 rounded-lg text-xs transition-colors flex items-center justify-center gap-1 uppercase tracking-wider text-[11px]"
             id={`btn-view-spec-${product.id}`}
           >
             <FileText className="w-3.5 h-3.5 text-slate-600" />
             <span>Specs</span>
-          </button>
+          </button> */}
 
+<button
+  onClick={() => onViewDetails(product)}
+  className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2 rounded-lg text-xs transition-colors flex items-center justify-center gap-1 uppercase tracking-wider text-[11px]"
+  id={`btn-view-spec-${product.id}`}
+>
+  <FileText className="w-3.5 h-3.5 text-slate-600" />
+  <span>Specs</span>
+</button>
           <button
             onClick={() => onOpenQueryModal(product.name)}
             className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 rounded-lg text-xs transition-colors shadow-xs flex items-center justify-center gap-1 uppercase tracking-wider text-[11px]"
