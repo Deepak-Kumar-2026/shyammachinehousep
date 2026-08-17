@@ -116,7 +116,7 @@ export const COMPANY_INFO = {
   stats: [
     { label: 'Years of Excellence', value: '25+' },
     { label: 'Machines Delivered', value: '12,500+' },
-    { label: 'Global Destinations', value: 'Cities in India' },
+    { label: 'In india', value: '5+ Cities ' },
     { label: 'Customer Satisfaction', value: '99.4%' }
   ]
 };
